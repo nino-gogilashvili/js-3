@@ -13,7 +13,7 @@ function test(arr) {
    let uniqueArray = [];
    for(let value of arr) {
    if(uniqueArray.indexOf(value) === uniqueArray.indexOf(value -1)){
-        uniqueArray.shift(value);
+        uniqueArray.push(value);
          } 
     } return console.log(uniqueArray[1]);
  } 
@@ -51,12 +51,12 @@ console.log( countNegatives([[-1, 2, -2, -8],
 // reverse
 
 const  reverseNum = function (x) {
-    if (x < 0) return -1 * reverse(-x);
+    if (x < 0) return -1 * (-x + "").split('').reverse().join('');
     let num = (x + "").split('').reverse().join('');
     return (num > 2**31 -1) ? 0 : num
 } 
 
-console.log(reverseNum(-2341));
+console.log(reverseNum(-125));
 
 // html style
 
