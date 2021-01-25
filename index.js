@@ -22,12 +22,12 @@ test(arr);
 
 // სტრინგი ხმოვნების გარეშე
 
-function disemvowel(str) {
+function deletevowel(str) {
   let vowels = ['a', 'e', 'i', 'o', 'u'];
-  return str.split('').filter(char => !vowels.includes(char)).join('');
+  return str.split('').filter(item => !vowels.includes(item)).join('');
 }
 
-console.log(disemvowel('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur'));
+console.log(deletevowel('Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur'));
 
 
 // grid
@@ -50,13 +50,13 @@ console.log( countNegatives([[-1, 2, -2, -8],
 
 // reverse
 
-const  reverseNum = function (x) {
+const  reverse = function (x) {
     if (x < 0) return -1 * (-x + "").split('').reverse().join('');
     let num = (x + "").split('').reverse().join('');
     return (num > 2**31 -1) ? 0 : num
 } 
 
-console.log(reverseNum(-125));
+console.log(reverse(-125));
 
 // html style
 
